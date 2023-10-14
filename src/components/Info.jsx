@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import CurrentCity from "./CurrentCity";
 import Card from "./Card";
@@ -6,11 +6,25 @@ import "../css/Info.css";
 import { defaultcurrJson, defaultJson } from "./defaultData";
 
 function Info() {
-  const [city, setCurrentCity] = useState("Manila");
+  const [city, setCurrentCity] = useState("New York City");
   const [newCity, setNewCity] = useState(""); // State for the new city input
   const [currentForecast, setCurrentforcast] = useState(defaultcurrJson);
   const [weekForecast, seetWeekForecast] = useState(defaultJson);
   const apiKey = "aa33a959de8beacdf6a591b04cc64207";
+
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  // Update the current time every second
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    // Clean up the interval when the component unmounts
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
 
   const fetchWeatherData = async (selectedCity) => {
     const cityURL = `http://api.openweathermap.org/geo/1.0/direct?q=${selectedCity}&limit=5&appid=${apiKey}`;
@@ -62,6 +76,7 @@ function Info() {
         </div>
         <div className="col-md-6">
           <div>
+            <p>Current Time: {currentTime.toLocaleTimeString()}</p>
             <input
               type="text"
               placeholder="Enter a city"
@@ -69,7 +84,7 @@ function Info() {
               onChange={(e) => setNewCity(e.target.value)}
             />
             <button className="btn btn-success" onClick={handleFetch}>
-              Fetch
+              Forecast
             </button>
           </div>
         </div>
