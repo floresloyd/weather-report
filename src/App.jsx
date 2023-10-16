@@ -1,6 +1,7 @@
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Dashboard from "./components/Dashboard";
 import Info from "./components/Info";
+import "./css/App.css";
 
 const App = () => {
   return (

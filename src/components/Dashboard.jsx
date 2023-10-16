@@ -1,7 +1,23 @@
-function Dashboard() {
+/* eslint-disable react/prop-types */
+import "../css/Info.css";
+function Dashboard({ focusSearchInput }) {
+  const handleSearchClick = () => {
+    focusSearchInput();
+  };
   return (
-    <div className="container border">
+    <div className="container border text-center bg-color">
       <h1> DashBoard</h1>
+      <h3>
+        {" "}
+        <a href="#" onClick={() => window.location.reload()}>
+          🏠 Home
+        </a>{" "}
+      </h3>
+      <h3>
+        <a href="#" onClick={handleSearchClick}>
+          🔎 Search
+        </a>
+      </h3>
     </div>
   );
 }

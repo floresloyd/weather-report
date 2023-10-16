@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import CurrentCity from "./CurrentCity";
 import Card from "./Card";
@@ -9,11 +9,17 @@ function Info() {
   const [city, setCurrentCity] = useState("New York City");
   const [newCity, setNewCity] = useState(""); // State for the new city input
   const [currentForecast, setCurrentforcast] = useState(defaultcurrJson);
-  const [weekForecast, seetWeekForecast] = useState(defaultJson);
+  const [weekForecast, setWeekForecast] = useState(defaultJson);
   const apiKey = "aa33a959de8beacdf6a591b04cc64207";
-
   const [currentTime, setCurrentTime] = useState(new Date());
 
+  const searchInputRef = useRef(null);
+
+  const focusSearchInput = () => {
+    if (searchInputRef.current) {
+      searchInputRef.current.focus();
+    }
+  };
   // Update the current time every second
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -52,7 +58,7 @@ function Info() {
     try {
       const response2 = await axios.get(forecastURL);
       const forecastData = response2.data.daily;
-      seetWeekForecast(forecastData);
+      setWeekForecast(forecastData);
     } catch (error) {
       console.error("Error fetching forecast data: ", error);
     }
@@ -62,8 +68,17 @@ function Info() {
     fetchWeatherData(newCity || city); // Use the newCity if provided, otherwise use the current city
   };
 
+  const sortWeatherByMaxTemp = () => {
+    setWeekForecast((prevWeekForecast) => {
+      const sortedForecast = [...prevWeekForecast.daily];
+      sortedForecast.sort(
+        (a, b) => b.temperature_2m_max - a.temperature_2m_max
+      );
+      return { daily: sortedForecast };
+    });
+  };
   return (
-    <div className="container border">
+    <div className="container border bg-color">
       <div className="row">
         <div className="col-md-6">
           <CurrentCity
@@ -78,6 +93,7 @@ function Info() {
           <div>
             <p>Current Time: {currentTime.toLocaleTimeString()}</p>
             <input
+              ref={focusSearchInput}
               type="text"
               placeholder="Enter a city"
               value={newCity}
@@ -91,6 +107,9 @@ function Info() {
       </div>
       <div className="container border">
         <h1>Forecast</h1>
+        <button className="btn btn-success" onClick={sortWeatherByMaxTemp}>
+          Sort by Max Temp
+        </button>
         {weekForecast.daily.time.map((day, index) => (
           <Card
             key={index}
