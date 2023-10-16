@@ -1,8 +1,65 @@
-# React + Vite
+# Web Development Project 5 - _Weather-App_
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Submitted by: **Loyd Flores**
 
-Currently, two official plugins are available:
+This web app: **"Your application provides users with up-to-date weather information for any city. Users can enter a city name, and the app displays current weather conditions and a week-long weather forecast, along with the ability to sort the forecast by maximum temperature."**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Time spent: **5** hours spent in total
+
+## Required Features
+
+The following **required** functionality is completed:
+
+- [🗸] **The list displays a list of data fetched using an API call**
+- [🗸] **Data uses the useEffect React hook and async/await syntax**
+- [🗸] **The app dashboard includes at least three summary statistics about the data such as**
+- [🗸] **A search bar allows the user to search for an item in the fetched data**
+- [🗸] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
+
+The following **additional** features are implemented:
+
+- [🗸] **Mobile Friendly Sizing**
+- [🗸] **Built in clock**
+
+## Snippets
+
+<img src='src/assets/screenshot.png' title='start-image' width='' alt='snippet' />
+
+## Video Walkthrough
+
+[Watch the Video](https://clipchamp.com/watch/QacA9tfKFOt)
+
+<!-- Replace this with whatever GIF tool you used! -->
+<img src="src/assets/weather-walkthrough.mp4" alt="pokegif" width="200" align="center">
+
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<!-- Replace this with whatever GIF tool you used! -->
+
+GIF created with ...
+
+<!-- Recommended tools:
+[Kap](https://getkap.co/) for macOS
+[ScreenToGif](https://www.screentogif.com/) for Windows
+[peek](https://github.com/phw/peek) for Linux. -->
+
+## Difficulties
+
+- Conditional Filtering using .filter()
+- Working with API's that needed API key and having to pull multiple amounts of data
+
+## License
+
+    Copyright 2023  Lots Flores
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
