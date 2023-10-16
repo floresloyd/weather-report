@@ -27,6 +27,8 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
+<img src="src/assets/vid.gif" alt="pokegif" width="200">
+
 [Watch the Video](https://clipchamp.com/watch/QacA9tfKFOt)
 
 <!-- Replace this with whatever GIF tool you used! -->
