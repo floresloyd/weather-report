@@ -30,18 +30,10 @@ The following **additional** features are implemented:
 [Watch the Video](https://clipchamp.com/watch/QacA9tfKFOt)
 
 <!-- Replace this with whatever GIF tool you used! -->
-<img src="src/assets/weather-walkthrough.mp4" alt="pokegif" width="200" align="center">
-
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-<!-- Replace this with whatever GIF tool you used! -->
 
 GIF created with ...
 
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+Microsoft Clipchamp
 
 ## Difficulties
 
