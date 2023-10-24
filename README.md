@@ -16,6 +16,10 @@ The following **required** functionality is completed:
 - [🗸] **A search bar allows the user to search for an item in the fetched data**
 - [🗸] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
 
+** PROJECT 6 **
+
+- [🗸] **Clicking on an item has a direct, unique link to that item's detail view page**
+
 The following **additional** features are implemented:
 
 - [🗸] **Mobile Friendly Sizing**
@@ -33,7 +37,7 @@ The following **additional** features are implemented:
 
 <!-- Replace this with whatever GIF tool you used! -->
 
-GIF created with ...
+GIF created with ...npm r
 
 Microsoft Clipchamp
 
