@@ -4,6 +4,7 @@ import CurrentCity from "./CurrentCity";
 import Card from "./Card";
 import "../css/Info.css";
 import { defaultcurrJson, defaultJson } from "./defaultData";
+import WeatherChart from "../components/WeatherChart";
 
 function Info() {
   const [city, setCurrentCity] = useState("New York City");
@@ -36,7 +37,7 @@ function Info() {
     const cityURL = `http://api.openweathermap.org/geo/1.0/direct?q=${selectedCity}&limit=5&appid=${apiKey}`;
     const weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${selectedCity}&appid=${apiKey}`;
     const forecastURL = `https://api.open-meteo.com/v1/forecast?latitude=${selectedCity.lat}&longitude=${selectedCity.lon}&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,uv_index_max,windspeed_10m_max&timezone=America%2FNew_York`;
-
+    console.log(selectedCity);
     try {
       const cityResponse = await axios.get(cityURL);
       const cityData = cityResponse.data[0];
@@ -60,7 +61,7 @@ function Info() {
       const forecastData = response2.data.daily;
       setWeekForecast(forecastData);
     } catch (error) {
-      console.error("Error fetching forecast data: ", error);
+      console.error("Error fetching forecast data:handleFetch ", error);
     }
   };
 
@@ -102,6 +103,7 @@ function Info() {
             <button className="btn btn-success" onClick={handleFetch}>
               Forecast
             </button>
+            <WeatherChart weekForecast={weekForecast.daily} />
           </div>
         </div>
       </div>

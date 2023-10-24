@@ -9,12 +9,14 @@ function Dashboard({ focusSearchInput }) {
       <h1> DashBoard</h1>
       <h3>
         {" "}
-        <a href="#" onClick={() => window.location.reload()}>
+        <a href="/">
+          {/* <a href="/" onClick={() => window.location.reload()}> */}
           🏠 Home
         </a>{" "}
       </h3>
       <h3>
-        <a href="#" onClick={handleSearchClick}>
+        <a href="/search">
+          {/* <a href="/search" onClick={handleSearchClick}> */}
           🔎 Search
         </a>
       </h3>
