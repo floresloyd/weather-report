@@ -17,8 +17,16 @@ The following **required** functionality is completed:
 - [🗸] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
 
 ** PROJECT 6 **
+The following **required** functionality is completed:
 
+- [❌] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
+- [❌] **Clicking on an item in the list view displays more details about it**
 - [🗸] **Clicking on an item has a direct, unique link to that item's detail view page**
+
+The following **optional** features are implemented:
+
+- [❌]The site's customized dashboard contains more content that explains what is interesting about the data
+- [❌]The site allows users to toggle between different data visualizations
 
 The following **additional** features are implemented:
 
@@ -43,8 +51,9 @@ Microsoft Clipchamp
 
 ## Difficulties
 
-- Conditional Filtering using .filter()
-- Working with API's that needed API key and having to pull multiple amounts of data
+- Routes were the lesson of Unit 6. I implemented the routes on my webpage but the difficulty is I'm making my API pull in my Info.jsx, which is the child component of App.jsx. In order for me to fulfill all the other requirements I needed to send the information from info.jsx to be sent up to app.jsx to be sent down again.
+
+- The layout of my initial project was not easy to debug to setup proper passing of data. It was hard to just convert this into a properly structured routing app.
 
 ## License
 
