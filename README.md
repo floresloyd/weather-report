@@ -43,9 +43,13 @@ The following **additional** features are implemented:
 
 [Watch the Video](https://clipchamp.com/watch/QacA9tfKFOt)
 
+## Project 6 GIF
+
+![Alt Text](./src//assets/routes-gif.gif)
+
 <!-- Replace this with whatever GIF tool you used! -->
 
-GIF created with ...npm r
+GIF created with gif-convert
 
 Microsoft Clipchamp
 
