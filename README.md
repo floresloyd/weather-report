@@ -1,4 +1,4 @@
-# Web Development Project 5 - _Weather-App_
+# Web Development Project 5 & 6- _Weather-App_
 
 Submitted by: **Loyd Flores**
 
@@ -15,18 +15,6 @@ The following **required** functionality is completed:
 - [🗸] **The app dashboard includes at least three summary statistics about the data such as**
 - [🗸] **A search bar allows the user to search for an item in the fetched data**
 - [🗸] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
-
-** PROJECT 6 **
-The following **required** functionality is completed:
-
-- [❌] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
-- [❌] **Clicking on an item in the list view displays more details about it**
-- [🗸] **Clicking on an item has a direct, unique link to that item's detail view page**
-
-The following **optional** features are implemented:
-
-- [❌]The site's customized dashboard contains more content that explains what is interesting about the data
-- [❌]The site allows users to toggle between different data visualizations
 
 The following **additional** features are implemented:
 
